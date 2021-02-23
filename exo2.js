@@ -2,20 +2,14 @@
 function add(params){
     if (params === '')
     {
-        //si le paramètre est vide, on affiche 0
-        console.log(0);
+        console.log(0); //si le paramètre est vide, on affiche 0
     }
     else
-    {
-        //sinon on split notre paramètre en tableau
-        const numbers = params.split(',');
-
-        //on initialise la somme avant le foreach
-        let somme = 0;
-
+    {  
+        const numbers = params.split(',');  // on split notre paramètre en tableau
+        let somme = 0;  //on initialise la somme avant le foreach
         numbers.forEach(element => {
-            //on additionne chaque element des paramètres qu'on a split en tableaux
-            somme += parseFloat(element);
+            somme += parseFloat(element);   //on additionne chaque element des paramètres qu'on a split en tableaux
         })
 
         //on affiche la somme dans la console (en int)
@@ -29,3 +23,4 @@ function add(params){
 }
 
 add('1.1,1.2,4');
+//cela retourne 6.3 (en number puis en int)
